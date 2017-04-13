@@ -1,0 +1,43 @@
+{
+  "name": "@rdbird/dom-classnames",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://github.com/RdBird/dom-classnames#readme",
+  "author": "Julien Polo <jpolo@auchan.fr>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "eslint . --fix",
+    "test": "mocha",
+    "validate": "eslint . && flow && mocha"
+  },
+  "keywords": [
+    "dom",
+    "classnames"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RdBird/dom-classnames.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RdBird/dom-classnames/issues"
+  },
+  "dependencies": {
+    "pre-push": "0.1.1"
+  },
+  "devDependencies": {
+    "@rdbird/eslint-config": "^2.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "expect": "^1.20.2",
+    "flow-bin": "^0.44.0",
+    "flow-typed": "^2.0.0",
+    "mocha": "^3.2.0"
+  },
+  "pre-push": [
+    "validate"
+  ]
+}
