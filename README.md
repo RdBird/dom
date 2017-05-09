@@ -1,8 +1,10 @@
 [![Version][version-svg]][package-url] [![Build Status][circleci-svg]][circleci-url] [![License][license-image]][license-url]
 
-# RdBird ESLint Configuration
+# DOM Classname helper
 
-TODO
+Fork of (classnames)[https://github.com/JedWatson/classnames]
+
+The goal of this project is to experiment and improve on a simple project all rdbird build/test system.
 
 ## Project installation
 
