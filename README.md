@@ -2,7 +2,7 @@
 
 # DOM Classname helper
 
-Fork of (classnames)[https://github.com/JedWatson/classnames]
+Fork of https://github.com/JedWatson/classnames
 
 The goal of this project is to experiment and improve on a simple project all rdbird build/test system.
 
