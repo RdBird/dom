@@ -9,7 +9,7 @@ type ClassName =
   | null;
 
 interface ClassSet {
-  push(part: string): mixed,
+  push(part: string): mixed;
 }
 
 /**
@@ -53,15 +53,13 @@ function walk(value: ClassName, returnValue: ClassSet): void {
       break;
     case 'object':
       if (value === null) {
-      // do nothing
-      }
-      else if (Array.isArray(value)) {
+        // do nothing
+      } else if (Array.isArray(value)) {
         const valueLength = value.length;
         for (let i = 0; i < valueLength; i += 1) {
           walk(value[i], returnValue);
         }
-      }
-      else {
+      } else {
         const keys = Object.keys(value);
         const keyc = keys.length;
         for (let i = 0; i < keyc; i += 1) {
