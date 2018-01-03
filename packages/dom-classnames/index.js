@@ -37,9 +37,14 @@ export function join(parts: $ReadOnlyArray<ClassName>): string {
  * @param  args - heterogeneous elements
  * @returns the formatted class name string
  */
-export default function classNames(...args: $ReadOnlyArray<ClassName>): string {
+export function classNames(...args: $ReadOnlyArray<ClassName>): string {
   return join(args);
 }
+
+/**
+ * Export default
+ */
+export default classNames;
 
 function walk(value: ClassName, returnValue: ClassSet): void {
   switch (typeof value) {
