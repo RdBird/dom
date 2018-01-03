@@ -3,7 +3,6 @@
   "private": true,
   "author": "Julien Polo <jpolo@auchan.fr>",
   "scripts": {
-    "build:clean": "npx rimraf build/ *.log",
     "build": "lerna run build",
     "changelog": "lerna-changelog",
     "flow-typed": "flow-typed install",
