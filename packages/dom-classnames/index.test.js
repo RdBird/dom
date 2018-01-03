@@ -1,24 +1,38 @@
 // @flow
 /* eslint-disable flowtype/no-weak-types */
 
-import { default as classNames, join } from '../index';
+import { default as classNames, join } from './index';
 
 describe('classNames', () => {
   function describeJoin(classNamesJoin: (a: Array<*>) => string) {
     return () => {
       test('keeps object keys with truthy values', () => {
-        expect(classNamesJoin([{
-          a: true,
-          b: false,
-          c: (0: any),
-          d: null,
-          e: undefined,
-          f: (1: any),
-        }])).toBe('a f');
+        expect(
+          classNamesJoin([
+            {
+              a: true,
+              b: false,
+              c: (0: any),
+              d: null,
+              e: undefined,
+              f: (1: any),
+            },
+          ])
+        ).toBe('a f');
       });
 
       test('joins arrays of class names and ignore falsy values except 0', () => {
-        expect(classNamesJoin(['a', (0: any), null, undefined, (true: any), (1: any), 'b'])).toBe('a 0 1 b');
+        expect(
+          classNamesJoin([
+            'a',
+            (0: any),
+            null,
+            undefined,
+            (true: any),
+            (1: any),
+            'b',
+          ])
+        ).toBe('a 0 1 b');
       });
 
       test('supports heterogenous arguments', () => {
@@ -47,7 +61,11 @@ describe('classNames', () => {
       });
 
       test('handles arrays that include falsy and true values', () => {
-        expect(classNamesJoin([['a', (0: any), null, undefined, false, (true: any), 'b']])).toBe('a 0 b');
+        expect(
+          classNamesJoin([
+            ['a', (0: any), null, undefined, false, (true: any), 'b'],
+          ])
+        ).toBe('a 0 b');
       });
 
       test('handles arrays that include arrays', () => {
@@ -59,7 +77,9 @@ describe('classNames', () => {
       });
 
       test('handles deep array recursion', () => {
-        expect(classNamesJoin([['a', ['b', ['c', { d: true }]]]])).toBe('a b c d');
+        expect(classNamesJoin([['a', ['b', ['c', { d: true }]]]])).toBe(
+          'a b c d'
+        );
       });
     };
   }

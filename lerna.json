@@ -1,0 +1,18 @@
+{
+  "lerna": "2.5.1",
+  "version": "independent",
+  "changelog": {
+    "repo": "@rdbird/dom-classnames"
+  },
+  "cacheDir": ".changelog",
+  "commands": {
+    "publish": {
+      "ignore": [
+        "*.test.js"
+      ]
+    }
+  },
+  "packages": [
+    "packages/*"
+  ]
+}

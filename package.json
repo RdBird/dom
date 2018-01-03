@@ -1,48 +1,61 @@
 {
-  "name": "@rdbird/dom-classnames",
-  "version": "0.0.1",
-  "description": "",
-  "homepage": "https://github.com/RdBird/dom-classnames#readme",
+  "name": "@rdbird/dom-classnames-srcs",
+  "private": true,
   "author": "Julien Polo <jpolo@auchan.fr>",
-  "license": "MIT",
-  "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm run build && npm run validate",
-    "format": "eslint . --fix",
-    "lint": "eslint .",
-    "test": "jest",
-    "flow": "flow --show-all-errors",
-    "flow-typed": "npx flow-typed install",
-    "validate": "npm run lint && npm run flow && npm run test",
-    "build": "exit 0"
+    "build:clean": "npx rimraf build/ *.log",
+    "build": "lerna run build",
+    "changelog": "lerna-changelog",
+    "flow-typed": "flow-typed install",
+    "flow": "flow",
+    "format": "lerna run format",
+    "lint": "lerna run lint",
+    "packages": "lerna",
+    "release": "lerna run publish:package",
+    "test": "lerna run test",
+    "validate": "lerna run validate"
   },
-  "keywords": [
-    "dom",
-    "classnames"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RdBird/dom-classnames.git"
-  },
-  "bugs": {
-    "url": "https://github.com/RdBird/dom-classnames/issues"
-  },
-  "dependencies": {},
   "devDependencies": {
-    "@rdbird/eslint-config": "^5.6.3",
+    "@rdbird/eslint-config": "^5.6.4",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.1.2",
     "babel-jest": "^22.0.4",
+    "babel-plugin-transform-flow-comments": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.24.1",
     "eslint": "^4.14.0",
     "flow-bin": "^0.62.0",
     "jest": "^22.0.4",
+    "lerna": "^2.5.1",
+    "lerna-changelog": "^0.7.0",
     "pre-push": "0.1.1",
     "prettier": "^1.9.2"
   },
   "pre-push": [
     "validate"
-  ]
+  ],
+  "eslintConfig": {
+    "root": true,
+    "parser": "babel-eslint",
+    "env": {
+      "jest": true
+    },
+    "extends": [
+      "@rdbird/eslint-config"
+    ]
+  },
+  "eslintIgnore": [
+    "flow-typed",
+    "build"
+  ],
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "transform-flow-comments"
+    ]
+  }
 }
