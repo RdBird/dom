@@ -1,7 +1,7 @@
 {
   "name": "@rdbird/dom-classnames",
   "private": true,
-  "version": "1.0.0-rc.6",
+  "version": "1.0.0",
   "description": "",
   "homepage": "https://github.com/RdBird/dom-classnames/packages/dom-classnames#readme",
   "author": "Julien Polo <jpolo@auchan.fr>",
