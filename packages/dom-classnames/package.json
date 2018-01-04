@@ -34,6 +34,8 @@
     "lint": "$npm_package_config_root/eslint .",
     "test": "$npm_package_config_root/jest",
     "validate": "npm run flow && npm run lint && npm run test",
-    "publish:package": "npm run validate && npm run build && npm publish $npm_package_config_build/$npm_package_name"
+    "prerelease": "npm run validate",
+    "release": "npx np --no-publish --any-branch",
+    "postrelease": "npm run build && npm publish $npm_package_config_build/$npm_package_name --tag next"
   }
 }

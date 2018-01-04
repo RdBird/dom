@@ -6,12 +6,9 @@
     "build": "lerna run build",
     "changelog": "lerna-changelog",
     "flow-typed": "flow-typed install",
-    "flow": "flow",
-    "format": "lerna run format",
-    "lint": "lerna run lint",
-    "packages": "lerna",
-    "release": "lerna run publish:package",
-    "test": "lerna run test",
+    "// 'npm run packages <command>' will run command on every project": "",
+    "packages": "lerna run",
+    "release": "lerna run release",
     "validate": "lerna run validate"
   },
   "devDependencies": {
