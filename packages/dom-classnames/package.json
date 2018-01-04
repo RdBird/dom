@@ -1,6 +1,6 @@
 {
   "name": "@rdbird/dom-classnames",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0-rc.4",
   "description": "",
   "homepage": "https://github.com/RdBird/dom-classnames/packages/dom-classnames#readme",
   "author": "Julien Polo <jpolo@auchan.fr>",
@@ -19,16 +19,16 @@
   "dependencies": {},
   "scripts": {
     "build:clean": "npx rimraf ../../build/$npm_package_name",
-    "build:copy-source": "npx copy ./package.json ../../build/$npm_package_name && npx flow-copy-source . ../../build/$npm_package_name",
-    "build:src": "../../node_modules/.bin/babel . -d ../../build/$npm_package_name",
-    "build": "npm run build:copy-source && npm run build:src",
+    "build:copy-files": "npx copy ./package.json ../../build/$npm_package_name",
+    "build:copy-flow": "npx flow-copy-source . ../../build/$npm_package_name --ignore '**/*.test.js'",
+    "build:src": "../../node_modules/.bin/babel . --ignore '**/*.test.js' -d ../../build/$npm_package_name",
+    "build": "npm run build:copy-files && npm run build:copy-flow && npm run build:src",
     "flow": "../../node_modules/.bin/flow",
     "format": "../../node_modules/.bin/eslint . --fix",
     "lint": "../../node_modules/.bin/eslint .",
     "test": "../../node_modules/.bin/jest",
     "validate": "npm run flow && npm run lint && npm run test",
-    "publish:prune": "npx rimraf ../../build/$npm_package_name/**/*.test.js*",
-    "publish:build": "npm run build:clean && npm run build && npm run publish:prune",
+    "publish:build": "npm run build:clean && npm run build",
     "publish:package": "npm run validate && npm run publish:build && npm publish ../../build/$npm_package_name"
   }
 }

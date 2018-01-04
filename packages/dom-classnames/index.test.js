@@ -1,9 +1,9 @@
 // @flow
 /* eslint-disable flowtype/no-weak-types */
 
-import { default as classNames, join } from './index';
+import * as DOMClassNames from './index';
 
-describe('classNames', () => {
+describe('DOMClassNames', () => {
   function describeJoin(classNamesJoin: (a: Array<*>) => string) {
     return () => {
       test('keeps object keys with truthy values', () => {
@@ -84,7 +84,10 @@ describe('classNames', () => {
     };
   }
 
-  describe('.join(...parts)', describeJoin(join));
+  describe('.join(...parts)', describeJoin(DOMClassNames.join));
 
-  describe('()', describeJoin((...args: *) => classNames.apply(null, args)));
+  describe(
+    '.of(part1, part2, ...)',
+    describeJoin((...args: *) => DOMClassNames.of(...args))
+  );
 });

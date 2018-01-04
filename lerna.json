@@ -2,9 +2,14 @@
   "lerna": "2.5.1",
   "version": "independent",
   "changelog": {
-    "repo": "@rdbird/dom-classnames"
+    "changelog": {
+      "labels": {
+        "enhancement": ":rocket: Enhancement",
+        "bug": ":bug: Bug Fix"
+      },
+      "cacheDir": ".changelog"
+    }
   },
-  "cacheDir": ".changelog",
   "commands": {
     "publish": {
       "ignore": [
