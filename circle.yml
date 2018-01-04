@@ -10,10 +10,3 @@ dependencies:
 test:
   override:
     - npm run validate
-
-deployment:
-  npm:
-    branch: master
-    commands:
-      - echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | npm login --scope=@RdBird
-      - npm publish || true
