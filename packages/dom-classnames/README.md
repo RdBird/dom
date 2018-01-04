@@ -1,8 +1,10 @@
+[<img src="https://rawgit.com/RdBird/rdbird.io/master/RDBIRD_logo.svg" alt="RdBird Project" height="40" />](//rdbird.io)
+
+# DOM Classname helper
+
 [![NPM Version][package-version-svg]][package-url] 
 [![Build Status][circleci-svg]][circleci-url] 
 [![License][license-image]][license-url]
-
-# DOM Classname helper
 
 Fork of [https://github.com/JedWatson/classnames]()
 
