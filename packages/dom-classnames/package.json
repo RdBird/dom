@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/RdBird/dom-classnames/packages/dom-classnames#readme",
+  "homepage": "https://github.com/RdBird/dom/packages/dom-classnames#readme",
   "author": "Julien Polo <jpolo@auchan.fr>",
   "license": "MIT",
   "keywords": [
@@ -12,10 +12,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RdBird/dom-classnames.git"
+    "url": "git+https://github.com/RdBird/dom.git"
   },
   "bugs": {
-    "url": "https://github.com/RdBird/dom-classnames/issues"
+    "url": "https://github.com/RdBird/dom/issues"
   },
   "dependencies": {},
   "config": {
