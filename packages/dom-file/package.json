@@ -1,0 +1,44 @@
+{
+  "name": "@rdbird/dom-file",
+  "private": true,
+  "version": "1.0.0-rc.1",
+  "description": "Promise based module to DOM Blob",
+  "homepage": "https://github.com/RdBird/dom/packages/dom#readme",
+  "author": "Julien Polo <jpolo@auchan.fr>",
+  "license": "MIT",
+  "keywords": [
+    "dom",
+    "file",
+    "blob",
+    "promise"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RdBird/dom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RdBird/dom/issues"
+  },
+  "dependencies": {},
+  "config": {
+    "root": "../../node_modules/.bin",
+    "build": "../../build"
+  },
+  "scripts": {
+    "prebuild": "npm run build:clean",
+    "build:docs": "$npm_package_config_root/shx cp '**/*.md' $npm_package_config_build/$npm_package_name",
+    "build:clean": "$npm_package_config_root/shx rm -rf $npm_package_config_build/$npm_package_name",
+    "build:copy-flow": "$npm_package_config_root/flow-copy-source . $npm_package_config_build/$npm_package_name --ignore '**/*.@(test|spec).js*'",
+    "build:copy-pkg": "$npm_package_config_root/copy-pkg package.json $npm_package_config_build/$npm_package_name/package.json --ignore private,scripts,config",
+    "build:src": "$npm_package_config_root/babel . --ignore '**/*.@(test|spec).js*' -d $npm_package_config_build/$npm_package_name",
+    "build": "npm run build:copy-flow && npm run build:copy-pkg && npm run build:src && npm run build:docs",
+    "flow": "$npm_package_config_root/flow",
+    "format": "$npm_package_config_root/eslint . --fix",
+    "lint": "$npm_package_config_root/eslint .",
+    "test": "$npm_package_config_root/jest",
+    "validate": "npm run flow && npm run lint && npm run test",
+    "prerelease": "npm run validate",
+    "release": "npx np --no-publish",
+    "postrelease": "npm run build && npm publish $npm_package_config_build/$npm_package_name"
+  }
+}
