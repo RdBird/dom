@@ -10,11 +10,29 @@ Fork of [https://github.com/JedWatson/classnames]()
 
 The goal of this project is to experiment and improve on a simple project all rdbird build/test system.
 
-## Project installation
+## Installation
 
-### 1. Installation
 ```sh
-npm install @rdbird/dom-classnames --save-dev
+npm install @rdbird/dom-classnames --save
+```
+
+## Usage
+
+```javascript
+import classNames from '@rdbird/dom-classnames';
+
+classNames('foo', 'bar'); // => 'foo bar'
+classNames('foo', { bar: true }); // => 'foo bar'
+classNames({ 'foo-bar': true }); // => 'foo-bar'
+classNames({ 'foo-bar': false }); // => ''
+classNames({ foo: true }, { bar: true }); // => 'foo bar'
+classNames({ foo: true, bar: true }); // => 'foo bar'
+
+// lots of arguments of various types
+classNames('foo', { bar: true, duck: false }, 'baz', { quux: true }); // => 'foo bar baz quux'
+
+// other falsy values are just ignored
+classNames(null, false, 'bar', undefined, 0, 1, { baz: null }, ''); // => 'bar 1'
 ```
 
 [package-version-svg]: https://img.shields.io/npm/v/@rdbird/dom-classnames.svg?style=flat-square
