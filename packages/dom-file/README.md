@@ -6,9 +6,22 @@
 [![Build Status][circleci-svg]][circleci-url] 
 [![License][license-image]][license-url]
 
+Promise based module to read DOM Blob content
+
 ## Installation
 ```sh
 npm install @rdbird/dom-file --save
+```
+
+## Usage
+```javascript
+import { readAsDataURL } from '@rdbird/dom-file';
+
+async function readData() {
+  const dataURLContent = await readAsDataURL('myurl');
+  // Do something...
+  return dataURLContent;
+}
 ```
 [package-version-svg]: https://img.shields.io/npm/v/@rdbird/dom-file.svg?style=flat-square
 [package-url]: https://www.npmjs.com/package/@rdbird/dom-file

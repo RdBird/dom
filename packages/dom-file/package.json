@@ -2,7 +2,7 @@
   "name": "@rdbird/dom-file",
   "private": true,
   "version": "1.0.0-rc.3",
-  "description": "Promise based module to DOM Blob",
+  "description": "Promise based module to read DOM Blob content",
   "homepage": "https://github.com/RdBird/dom/packages/dom#readme",
   "author": "Julien Polo <jpolo@auchan.fr>",
   "license": "MIT",
