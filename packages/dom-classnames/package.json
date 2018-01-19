@@ -37,6 +37,6 @@
     "validate": "npm run flow && npm run lint && npm run test",
     "prerelease": "npm run validate",
     "release": "npx np --no-publish",
-    "postrelease": "npm run build && npm publish $npm_package_config_build/$npm_package_name"
+    "postrelease": "npm run build && npm publish --access=public $npm_package_config_build/$npm_package_name"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "@rdbird/dom-file",
   "private": true,
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Promise based module to DOM Blob",
   "homepage": "https://github.com/RdBird/dom/packages/dom#readme",
   "author": "Julien Polo <jpolo@auchan.fr>",
@@ -39,6 +39,6 @@
     "validate": "npm run flow && npm run lint && npm run test",
     "prerelease": "npm run validate",
     "release": "npx np --no-publish",
-    "postrelease": "npm run build && npm publish $npm_package_config_build/$npm_package_name"
+    "postrelease": "npm run build && npm publish --access=public $npm_package_config_build/$npm_package_name"
   }
 }
