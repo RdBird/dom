@@ -2,7 +2,7 @@
   "name": "@rdbird/dom-classnames",
   "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Helper to concatenate DOM class names",
   "homepage": "https://github.com/RdBird/dom/packages/dom#readme",
   "author": "Julien Polo <jpolo@auchan.fr>",
   "license": "MIT",
