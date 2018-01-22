@@ -17,8 +17,8 @@ npm install @rdbird/dom-file --save
 ```javascript
 import { readAsDataURL } from '@rdbird/dom-file';
 
-async function readData() {
-  const dataURLContent = await readAsDataURL('myurl');
+async function readData(blobFile: Blob) {
+  const dataURLContent = await readAsDataURL(blobFile);
   // Do something...
   return dataURLContent;
 }
