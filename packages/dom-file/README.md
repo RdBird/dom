@@ -17,7 +17,7 @@ npm install @rdbird/dom-file --save
 
 ### Flow support
 
-Every `.js` file provides a flow definition file `.js.flow` containing type annotations.
+This package supports static typing with [Flow](https://flowtype.org). 
 
 ### Usage
 ```javascript
