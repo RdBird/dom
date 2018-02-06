@@ -6,17 +6,20 @@
 [![Build Status][circleci-svg]][circleci-url] 
 [![License][license-image]][license-url]
 
-Fork of [https://github.com/JedWatson/classnames]()
-
 The goal of this project is to experiment and improve on a simple project all rdbird build/test system.
 
-## Installation
+## Getting started
+
+### Installation
 
 ```sh
 npm install @rdbird/dom-classnames --save
 ```
+### Flow support
 
-## Usage
+Every `.js` file provides a flow definition file `.js.flow` containing type annotations.
+
+### Usage
 
 ```javascript
 import classNames from '@rdbird/dom-classnames';
@@ -34,6 +37,15 @@ classNames('foo', { bar: true, duck: false }, 'baz', { quux: true }); // => 'foo
 // other falsy values are just ignored
 classNames(null, false, 'bar', undefined, 0, 1, { baz: null }, ''); // => 'bar 1'
 ```
+
+## License
+
+This project is licensed under the MIT License
+
+## Aknowledgements
+
+*   Rewrite of [https://github.com/JedWatson/classnames]()
+
 
 [package-version-svg]: https://img.shields.io/npm/v/@rdbird/dom-classnames.svg?style=flat-square
 [package-url]: https://www.npmjs.com/package/@rdbird/dom-classnames

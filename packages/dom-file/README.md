@@ -8,12 +8,18 @@
 
 Promise based module to read DOM Blob content
 
-## Installation
+## Getting started
+
+### Installation
 ```sh
 npm install @rdbird/dom-file --save
 ```
 
-## Usage
+### Flow support
+
+Every `.js` file provides a flow definition file `.js.flow` containing type annotations.
+
+### Usage
 ```javascript
 import { readAsDataURL } from '@rdbird/dom-file';
 
@@ -23,6 +29,15 @@ async function readData(blobFile: Blob) {
   return dataURLContent;
 }
 ```
+
+## License
+
+This project is licensed under the MIT License
+
+## Aknowledgements
+
+* Inspired by [https://github.com/jahredhope/promise-file-reader]()
+
 [package-version-svg]: https://img.shields.io/npm/v/@rdbird/dom-file.svg?style=flat-square
 [package-url]: https://www.npmjs.com/package/@rdbird/dom-file
 [circleci-svg]: https://circleci.com/gh/RdBird/dom.svg?style=shield
