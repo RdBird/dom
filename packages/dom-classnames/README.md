@@ -15,9 +15,11 @@ The goal of this project is to experiment and improve on a simple project all rd
 ```sh
 npm install @rdbird/dom-classnames --save
 ```
-### Flow support
 
-This package supports static typing with [Flow](https://flowtype.org). 
+### Features
+
+*   __Flowtype support__: static type annotation with [Flow](https://flowtype.org). 
+
 
 ### Usage
 

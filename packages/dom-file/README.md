@@ -15,9 +15,13 @@ Promise based module to read DOM Blob content
 npm install @rdbird/dom-file --save
 ```
 
-### Flow support
+### Features
 
-This package supports static typing with [Flow](https://flowtype.org). 
+*   __Flowtype support__: static type annotation with [Flow](https://flowtype.org).
+*   __Promise based API__: 
+    *   Better composability than event based `FileReader`
+    *   Allow use of `async`/`await` latest async feature
+
 
 ### Usage
 ```javascript
