@@ -13,5 +13,5 @@ Their purpose are :
 
 ## Packages
 
-*   [dom-classnames](./packages/dom-classnames/README.md)
-*   [dom-file](./packages/dom-file/README.md)
+*   [dom-classnames](./packages/dom-classnames)
+*   [dom-file](./packages/dom-file)
