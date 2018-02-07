@@ -2,8 +2,8 @@
 
 # DOM File
 
-[![NPM Version][package-version-svg]][package-url] 
-[![Build Status][circleci-svg]][circleci-url] 
+[![NPM Version][package-version-svg]][package-url]
+[![Build Status][circleci-svg]][circleci-url]
 [![License][license-image]][license-url]
 
 Promise based module to read DOM Blob content
@@ -18,7 +18,7 @@ npm install @rdbird/dom-file --save
 ### Features
 
 *   __Flowtype support__: static type annotation with [Flow](https://flowtype.org).
-*   __Promise based API__: 
+*   __Promise based API__:
     *   Better composability than event based `FileReader`
     *   Allow use of `async`/`await` latest async feature
 
@@ -38,7 +38,7 @@ async function readData(blobFile: Blob) {
 
 This project is licensed under the MIT License
 
-## Aknowledgements
+## Acknowledgements
 
 * Inspired by [https://github.com/jahredhope/promise-file-reader]()
 

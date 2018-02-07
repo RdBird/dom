@@ -2,8 +2,8 @@
 
 # DOM Classname helper
 
-[![NPM Version][package-version-svg]][package-url] 
-[![Build Status][circleci-svg]][circleci-url] 
+[![NPM Version][package-version-svg]][package-url]
+[![Build Status][circleci-svg]][circleci-url]
 [![License][license-image]][license-url]
 
 The goal of this project is to experiment and improve on a simple project all rdbird build/test system.
@@ -18,7 +18,7 @@ npm install @rdbird/dom-classnames --save
 
 ### Features
 
-*   __Flowtype support__: static type annotation with [Flow](https://flowtype.org). 
+*   __Flowtype support__: static type annotation with [Flow](https://flowtype.org).
 
 
 ### Usage
@@ -44,7 +44,7 @@ classNames(null, false, 'bar', undefined, 0, 1, { baz: null }, ''); // => 'bar 1
 
 This project is licensed under the MIT License
 
-## Aknowledgements
+## Acknowledgements
 
 *   Rewrite of [https://github.com/JedWatson/classnames]()
 
